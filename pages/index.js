@@ -8,7 +8,7 @@ import MessageParser from '../utility/chatbot/MessageParser';
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.app}>
       <Head>
         <title>Inbox · Jeffrey Yu</title>
         <meta
@@ -17,11 +17,14 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Chatbot
-        config={config}
-        actionProvider={ActionProvider}
-        messageParser={MessageParser}
-      />
+      <div className={styles.chatbox}>
+        <Chatbot
+          className={styles}
+          config={config}
+          actionProvider={ActionProvider}
+          messageParser={MessageParser}
+        />
+      </div>
     </div>
   );
 }
