@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.1",
     "next": "12.1.0",
+    "random-joke-getter": "^2.0.3",
     "react": "17.0.2",
     "react-chat-ui": "^0.4.0",
     "react-chatbot-kit": "^2.0.1",
