@@ -1,5 +1,6 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import Options from '../../components/Options';
+import ExperienceCards from '../../components/ExperienceCards';
 
 const getMoodOptions = (actionProvider) => {
   return [
@@ -56,26 +57,6 @@ const getPersonalOptions = (actionProvider) => {
   ];
 };
 
-const getExperienceOptions = (actionProvider) => {
-  return [
-    {
-      text: 'Done.',
-      handler: () => actionProvider.handleGoodMoodFinally(),
-      id: 1,
-    },
-    {
-      text: 'TechFin.AI',
-      handler: () => actionProvider.handleTechFin(),
-      id: 2,
-    },
-    {
-      text: 'You have great experience!',
-      handler: () => actionProvider.handleBadMoodAgain(),
-      id: 3,
-    },
-  ];
-};
-
 const config = {
   botName: 'Jeffrey Yu',
   initialMessages: [
@@ -118,12 +99,7 @@ const config = {
     },
     {
       widgetName: 'experienceOptions',
-      widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getExperienceOptions}
-        />
-      ),
+      widgetFunc: () => <ExperienceCards />,
     },
   ],
 };
