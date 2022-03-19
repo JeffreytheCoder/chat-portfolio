@@ -2,6 +2,12 @@
 
 const intro =
   "I'm a Computer Science student at UCLA. I'm an aspiring software engineer, focused on fullstack web/app development. What do you want to know about me?";
+const experience =
+  "I have worked as Software Engineer intern in Done. and TechFin.AI. I'm going to be a SWE intern at Paramount this summer.";
+const projects =
+  "I'm passionate about spotting problems from people around me and building solutions that make their lives better. My recent projects are BruinEats, OnCampus, and vmawalk.";
+const skills =
+  "I'm a MERN stack lover. I'm also skilled in Vue, Django, and Firebase. I'm learning about Typescript, GraphQL, and Gatsby.";
 
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
@@ -15,7 +21,9 @@ class ActionProvider {
   }
 
   handleGoodMood() {
-    const message = this.createChatBotMessage(intro);
+    const message = this.createChatBotMessage(intro, {
+      widget: 'personalOptions',
+    });
     this.updateChatbotState(message);
   }
 
@@ -47,8 +55,16 @@ class ActionProvider {
 
   handleGoodMoodFinally() {
     const message = this.createChatBotMessage(
-      `Glad you're happy! Let me do a quick self intro: ${intro}`
+      `Glad you're happy! Let me do a quick self intro: ${intro}`,
+      { widget: 'personalOptions' }
     );
+    this.updateChatbotState(message);
+  }
+
+  handleExperience() {
+    const message = this.createChatBotMessage(experience, {
+      widget: 'experienceOptions',
+    });
     this.updateChatbotState(message);
   }
 

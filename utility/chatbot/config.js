@@ -1,6 +1,4 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import PersonalOptions from '../../components/PersonalOptions';
-import MoodOptions from '../../components/MoodOptions';
 import Options from '../../components/Options';
 
 const getMoodOptions = (actionProvider) => {
@@ -29,6 +27,51 @@ const getJokeOptions = (actionProvider) => {
       text: 'Tell me another one',
       handler: () => actionProvider.handleBadMoodAgain(),
       id: 2,
+    },
+  ];
+};
+
+const getPersonalOptions = (actionProvider) => {
+  return [
+    {
+      text: 'Experience',
+      handler: () => actionProvider.handleExperience(),
+      id: 1,
+    },
+    {
+      text: 'Projects',
+      handler: () => actionProvider.handleBadMoodAgain(),
+      id: 2,
+    },
+    {
+      text: 'Skills',
+      handler: () => actionProvider.handleBadMoodAgain(),
+      id: 3,
+    },
+    {
+      text: 'Blogs',
+      handler: () => actionProvider.handleBadMoodAgain(),
+      id: 4,
+    },
+  ];
+};
+
+const getExperienceOptions = (actionProvider) => {
+  return [
+    {
+      text: 'Done.',
+      handler: () => actionProvider.handleGoodMoodFinally(),
+      id: 1,
+    },
+    {
+      text: 'TechFin.AI',
+      handler: () => actionProvider.handleTechFin(),
+      id: 2,
+    },
+    {
+      text: 'You have great experience!',
+      handler: () => actionProvider.handleBadMoodAgain(),
+      id: 3,
     },
   ];
 };
@@ -62,6 +105,24 @@ const config = {
       widgetName: 'jokeOptions',
       widgetFunc: ({ actionProvider }) => (
         <Options actionProvider={actionProvider} getOptions={getJokeOptions} />
+      ),
+    },
+    {
+      widgetName: 'personalOptions',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getPersonalOptions}
+        />
+      ),
+    },
+    {
+      widgetName: 'experienceOptions',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getExperienceOptions}
+        />
       ),
     },
   ],
