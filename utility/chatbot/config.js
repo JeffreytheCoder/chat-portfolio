@@ -2,6 +2,7 @@ import { createChatBotMessage } from 'react-chatbot-kit';
 import Options from '../../components/Options';
 import ExperienceCards from '../../components/ExperienceCards';
 import ProjectCards from '../../components/ProjectCards';
+import SkillCards from '../../components/SkillCards';
 
 const getMoodOptions = (actionProvider) => {
   return [
@@ -47,7 +48,7 @@ const getPersonalOptions = (actionProvider) => {
     },
     {
       text: 'Skills',
-      handler: () => actionProvider.handleBadMoodAgain(),
+      handler: () => actionProvider.handleSkills(),
       id: 3,
     },
     {
@@ -105,6 +106,10 @@ const config = {
     {
       widgetName: 'projectsOptions',
       widgetFunc: () => <ProjectCards />,
+    },
+    {
+      widgetName: 'skillsOptions',
+      widgetFunc: () => <SkillCards />,
     },
   ],
 };

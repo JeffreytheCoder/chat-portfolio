@@ -75,6 +75,13 @@ class ActionProvider {
     this.updateChatbotState(message);
   }
 
+  handleSkills() {
+    const message = this.createChatBotMessage(skills, {
+      widget: 'skillsOptions',
+    });
+    this.updateChatbotState(message);
+  }
+
   updateChatbotState(message) {
     this.setState((prevState) => ({
       ...prevState,
