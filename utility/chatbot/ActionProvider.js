@@ -5,7 +5,7 @@ const intro =
 const experience =
   "I have worked as Software Engineer intern in Done. and TechFin.AI. I'm going to be a SWE intern at Paramount this summer.";
 const projects =
-  "I'm passionate about spotting problems from people around me and building solutions that make their lives better. My recent projects are BruinEats, OnCampus, and vmawalk.";
+  "I'm love spotting problems from people around me and building solutions that make their lives easier. My recent projects are BruinEats, OnCampus, and VMAWalk.";
 const skills =
   "I'm a MERN stack lover. I'm also skilled in Vue, Django, and Firebase. I'm learning about Typescript, GraphQL, and Gatsby.";
 
@@ -64,6 +64,13 @@ class ActionProvider {
   handleExperience() {
     const message = this.createChatBotMessage(experience, {
       widget: 'experienceOptions',
+    });
+    this.updateChatbotState(message);
+  }
+
+  handleProjects() {
+    const message = this.createChatBotMessage(projects, {
+      widget: 'projectsOptions',
     });
     this.updateChatbotState(message);
   }
