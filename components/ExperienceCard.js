@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-function ExperienceCard({ name, position, date, imgSrc, works }) {
+function ExperienceCard({ name, position, date, imgSrc, works, isDetailed }) {
   const [readMore, setReadMore] = useState(false);
 
   return (
@@ -15,6 +15,7 @@ function ExperienceCard({ name, position, date, imgSrc, works }) {
         display: 'flex',
         flexDirection: 'row',
         marginBottom: 1,
+        border: isDetailed ? 'none' : '',
       }}
       width="100%"
     >
@@ -39,7 +40,7 @@ function ExperienceCard({ name, position, date, imgSrc, works }) {
             {date}
           </Typography>
         </Box>
-        {readMore ? (
+        {readMore || isDetailed ? (
           <>
             {/* <ButtonBase
               sx={{
