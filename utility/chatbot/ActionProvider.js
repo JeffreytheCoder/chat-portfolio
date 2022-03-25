@@ -8,6 +8,7 @@ const projects =
   "I'm love spotting problems from people around me and building solutions that make their lives easier. My recent projects are BruinEats, OnCampus, and VMAWalk.";
 const skills =
   "I'm a MERN stack lover. I'm also skilled in Vue, Django, and Firebase. I'm learning about Typescript, GraphQL, and Gatsby.";
+const blogs = 'Check out my blogs on Dev Community and Medium!';
 
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
@@ -78,6 +79,13 @@ class ActionProvider {
   handleSkills() {
     const message = this.createChatBotMessage(skills, {
       widget: 'skillsOptions',
+    });
+    this.updateChatbotState(message);
+  }
+
+  handleBlogs() {
+    const message = this.createChatBotMessage(blogs, {
+      widget: 'blogsOptions',
     });
     this.updateChatbotState(message);
   }

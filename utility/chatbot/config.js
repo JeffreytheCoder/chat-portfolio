@@ -3,6 +3,7 @@ import Options from '../../components/Options';
 import ExperienceCards from '../../components/ExperienceCards';
 import ProjectCards from '../../components/ProjectCards';
 import SkillCards from '../../components/SkillCards';
+import BlogCards from '../../components/BlogCards';
 
 const getMoodOptions = (actionProvider) => {
   return [
@@ -53,7 +54,7 @@ const getPersonalOptions = (actionProvider) => {
     },
     {
       text: 'Blogs',
-      handler: () => actionProvider.handleBadMoodAgain(),
+      handler: () => actionProvider.handleBlogs(),
       id: 4,
     },
   ];
@@ -110,6 +111,10 @@ const config = {
     {
       widgetName: 'skillsOptions',
       widgetFunc: () => <SkillCards />,
+    },
+    {
+      widgetName: 'blogsOptions',
+      widgetFunc: () => <BlogCards />,
     },
   ],
 };
