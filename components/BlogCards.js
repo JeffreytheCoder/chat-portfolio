@@ -14,11 +14,19 @@ const blogs = [
   },
 ];
 
-function BlogCards() {
+function BlogCards({ isDetailed }) {
   return (
     <>
       {blogs.map(({ name, link, imgSrc }, idx) => {
-        return <BlogCard name={name} link={link} imgSrc={imgSrc} key={idx} />;
+        return (
+          <BlogCard
+            name={name}
+            link={link}
+            imgSrc={imgSrc}
+            key={idx}
+            isDetailed={isDetailed}
+          />
+        );
       })}
     </>
   );

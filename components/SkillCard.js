@@ -12,7 +12,7 @@ import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-function SkillCard({ name, skills }) {
+function SkillCard({ name, skills, isDetailed }) {
   return (
     <Card
       variant="outlined"
@@ -21,8 +21,9 @@ function SkillCard({ name, skills }) {
         display: 'flex',
         flexDirection: 'column',
         marginBottom: 1,
+        border: isDetailed ? 'none' : '',
       }}
-      width="100%"
+      width={isDetailed ? '500px' : '100%'}
     >
       <Typography variant="h6">{name}</Typography>
       {skills.map(([name, val], idx) => {
@@ -34,6 +35,7 @@ function SkillCard({ name, skills }) {
             key={idx}
             width="100%"
             alignItems="center"
+            sx={{ paddingTop: '3px' }}
           >
             <Grid item xs={3} md={1}>
               <Typography>{name}</Typography>

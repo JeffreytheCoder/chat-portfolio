@@ -12,6 +12,12 @@ import ExperienceCards from './ExperienceCards';
 import { grey } from '@mui/material/colors';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { Box } from '@mui/system';
+import ProjectCards from './ProjectCards';
+import ArchitectureRoundedIcon from '@mui/icons-material/ArchitectureRounded';
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
+import SkillCards from './SkillCards';
+import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
+import BlogCards from './BlogCards';
 
 function SectionsBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -47,6 +53,12 @@ function SectionsBar() {
     switch (section) {
       case 'Experience':
         return <ExperienceCards isDetailed={true} />;
+      case 'Projects':
+        return <ProjectCards isDetailed={true} />;
+      case 'Skills':
+        return <SkillCards isDetailed={true} />;
+      case 'Blogs':
+        return <BlogCards isDetailed={true} />;
       default:
         return <></>;
     }
@@ -65,6 +77,45 @@ function SectionsBar() {
           <WorkOutlineIcon sx={{ color: grey[700], width: 30, height: 30 }} />
         </IconButton>
       </Tooltip>
+
+      <Tooltip
+        title={<span style={{ fontSize: 13 }}>projects</span>}
+        placement="left"
+      >
+        <IconButton
+          aria-label="projects"
+          onClick={() => toggleDrawer(true, 'Projects')}
+        >
+          <ArchitectureRoundedIcon
+            sx={{ color: grey[700], width: 30, height: 30 }}
+          />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip
+        title={<span style={{ fontSize: 13 }}>skills</span>}
+        placement="left"
+      >
+        <IconButton
+          aria-label="skills"
+          onClick={() => toggleDrawer(true, 'Skills')}
+        >
+          <CodeOutlinedIcon sx={{ color: grey[700], width: 30, height: 30 }} />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip
+        title={<span style={{ fontSize: 13 }}>blogs</span>}
+        placement="left"
+      >
+        <IconButton
+          aria-label="blogs"
+          onClick={() => toggleDrawer(true, 'Blogs')}
+        >
+          <BookOutlinedIcon sx={{ color: grey[700], width: 30, height: 30 }} />
+        </IconButton>
+      </Tooltip>
+
       <Drawer
         anchor="right"
         open={drawerOpen}

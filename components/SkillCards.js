@@ -28,11 +28,18 @@ const skills = [
   },
 ];
 
-function SkillCards() {
+function SkillCards({ isDetailed }) {
   return (
     <>
       {skills.map(({ name, skills }, idx) => {
-        return <SkillCard name={name} skills={skills} key={idx} />;
+        return (
+          <SkillCard
+            name={name}
+            skills={skills}
+            key={idx}
+            isDetailed={isDetailed}
+          />
+        );
       })}
     </>
   );

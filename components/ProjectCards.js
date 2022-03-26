@@ -26,7 +26,7 @@ const experiences = [
   },
 ];
 
-function ProjectCards() {
+function ProjectCards({ isDetailed }) {
   return (
     <>
       {experiences.map(({ name, position, date, imgSrc, works }, idx) => {
@@ -38,6 +38,7 @@ function ProjectCards() {
             imgSrc={imgSrc}
             works={works}
             key={idx}
+            isDetailed={isDetailed}
           />
         );
       })}

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-function BlogCard({ name, link, imgSrc }) {
+function BlogCard({ name, link, imgSrc, isDetailed }) {
   return (
     <Card
       variant="outlined"
@@ -13,6 +13,7 @@ function BlogCard({ name, link, imgSrc }) {
         display: 'flex',
         flexDirection: 'row',
         marginBottom: 1,
+        border: isDetailed ? 'none' : '',
       }}
       width="100%"
     >
@@ -31,7 +32,6 @@ function BlogCard({ name, link, imgSrc }) {
             textTransform: 'none',
             cursor: 'pointer',
           }}
-          onClick={() => setReadMore(!readMore)}
         >
           <a href={link} target="_blank" rel="noreferrer">
             <Typography color={grey[600]}>See my blogs</Typography>
