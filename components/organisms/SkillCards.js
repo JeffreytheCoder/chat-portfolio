@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillCard from './SkillCard';
+import SkillCard from '../molecules/SkillCard';
 
 const skills = [
   {

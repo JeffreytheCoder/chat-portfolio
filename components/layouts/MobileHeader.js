@@ -4,6 +4,7 @@ import StyledBadge from '../atoms/StyledBadge';
 import { Avatar, ButtonBase, Drawer, IconButton } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import MobileLinksBar from './MobileLinksBar';
+import MobileSectionsBar from './MobileSectionsBar';
 
 function MobileHeader() {
   const [linksBarOpen, setLinksBarOpen] = useState(false);
@@ -46,6 +47,22 @@ function MobileHeader() {
         PaperProps={{ sx: { padding: '20px', width: 'fit-content' } }}
       >
         <MobileLinksBar />
+      </Drawer>
+
+      <Drawer
+        anchor="right"
+        open={sectionBarOpen}
+        onClose={() => setSectionBarOpen(false)}
+        PaperProps={{
+          sx: {
+            paddingLeft: '5px',
+            paddingRight: '20px',
+            paddingY: '10px',
+            width: 'fit-content',
+          },
+        }}
+      >
+        <MobileSectionsBar />
       </Drawer>
     </Box>
   );

@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import {
-  Button,
-  ButtonBase,
-  IconButton,
-  Tooltip,
-  Typography,
-} from '@mui/material';
+
+import { IconButton, Tooltip, Typography } from '@mui/material';
 import { Drawer } from '@mui/material';
-import ExperienceCards from '../organisms/ExperienceCards';
 import { grey } from '@mui/material/colors';
-import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { Box } from '@mui/system';
+
+import ExperienceCards from '../organisms/ExperienceCards';
 import ProjectCards from '../organisms/ProjectCards';
+import SkillCards from '../organisms/SkillCards';
+import BlogCards from '../organisms/BlogCards';
+
 import ArchitectureRoundedIcon from '@mui/icons-material/ArchitectureRounded';
 import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
-import SkillCards from '../molecules/SkillCards';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
-import BlogCards from '../organisms/BlogCards';
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 
 function SectionsBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
