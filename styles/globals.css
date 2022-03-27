@@ -17,7 +17,7 @@ a {
 }
 
 .MuiDrawer-paper {
-  width: 65% !important;
+  width: 65%;
 }
   
 @media (max-width: 640px) {
