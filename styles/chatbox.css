@@ -141,6 +141,15 @@
   min-height: 100vh;
 }
 
+@media (max-width: 640px) {
+  .react-chatbot-kit-chat-container {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+  }
+}
+
 .react-chatbot-kit-chat-inner-container {
   display: flex;
   flex-direction: column;

@@ -17,14 +17,12 @@ const WebHome = () => {
       <div className={styles.links}>
         <LinksBar />
       </div>
-      <div className={styles.chatbox}>
-        <Chatbot
-          className={styles}
-          config={config}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser}
-        />
-      </div>
+      <Chatbot
+        className={styles}
+        config={config}
+        actionProvider={ActionProvider}
+        messageParser={MessageParser}
+      />
       <div className={styles.links}>
         <SectionsBar />
       </div>
@@ -34,16 +32,22 @@ const WebHome = () => {
 
 const MobileHome = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', width: '100vw' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100vw',
+        minHeight: '100vh',
+        height: '100vh',
+      }}
+    >
       <MobileHeader />
-      <div className={styles.chatbox}>
-        <Chatbot
-          className={styles}
-          config={config}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser}
-        />
-      </div>
+      <Chatbot
+        className={styles}
+        config={config}
+        actionProvider={ActionProvider}
+        messageParser={MessageParser}
+      />
     </Box>
   );
 };
@@ -60,6 +64,7 @@ export default function Home() {
           name="description"
           content="Jeffrey Yu | Software Engineer | Personal Website "
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {width > 640 ? <WebHome /> : <MobileHome />}

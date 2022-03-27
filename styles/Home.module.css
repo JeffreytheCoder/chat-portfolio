@@ -16,39 +16,3 @@
   justify-content: space-around;
   align-items: center;
 }
-
-/* @media (max-width: 640px) {
-  .links {
-    display: none;
-  }
-} */
-
-.mobile {
-  display: hidden
-}
-
-@media (max-width: 640px) {
-  .mobile {
-    display: flex
-  }
-}
-
-.web {
-  display: flex
-}
-
-@media (max-width: 640px) {
-  .web {
-    display: hidden
-  }
-}
-
-.chatbox {
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* .chatbox-mobile {
-  width: 100vw;
-  min-height: 100vh;
-} */
