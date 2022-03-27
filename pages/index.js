@@ -5,11 +5,11 @@ import Chatbot from 'react-chatbot-kit';
 import config from '../utility/chatbot/config';
 import ActionProvider from '../utility/chatbot/ActionProvider';
 import MessageParser from '../utility/chatbot/MessageParser';
-import LinksBar from '../components/LinksBar';
-import SectionsBar from '../components/SectionsBar';
+import LinksBar from '../components/layouts/LinksBar';
+import SectionsBar from '../components/layouts/SectionsBar';
 import useWindowSize from '../hooks/useWindowSize';
 import { Box } from '@mui/system';
-import MobileHeader from '../components/MobileHeader';
+import MobileHeader from '../components/layouts/MobileHeader';
 
 const WebHome = () => {
   return (

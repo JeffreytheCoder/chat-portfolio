@@ -8,16 +8,16 @@ import {
   Typography,
 } from '@mui/material';
 import { Drawer } from '@mui/material';
-import ExperienceCards from './ExperienceCards';
+import ExperienceCards from '../organisms/ExperienceCards';
 import { grey } from '@mui/material/colors';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { Box } from '@mui/system';
-import ProjectCards from './ProjectCards';
+import ProjectCards from '../organisms/ProjectCards';
 import ArchitectureRoundedIcon from '@mui/icons-material/ArchitectureRounded';
 import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
-import SkillCards from './SkillCards';
+import SkillCards from '../molecules/SkillCards';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
-import BlogCards from './BlogCards';
+import BlogCards from '../organisms/BlogCards';
 
 function SectionsBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);

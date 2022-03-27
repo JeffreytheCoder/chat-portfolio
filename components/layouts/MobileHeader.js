@@ -1,6 +1,6 @@
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
-import StyledBadge from './StyledBadge';
+import StyledBadge from '../atoms/StyledBadge';
 import { Avatar, ButtonBase, Drawer, Typography } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 

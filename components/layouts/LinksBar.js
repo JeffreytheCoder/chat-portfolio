@@ -15,7 +15,7 @@ import { Popover } from '@mui/material';
 import Link from 'next/link';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import StyledBadge from './StyledBadge';
+import StyledBadge from '../atoms/StyledBadge';
 
 function LinksBar() {
   const avatarRef = useRef(null);

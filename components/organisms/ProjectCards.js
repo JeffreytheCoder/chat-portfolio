@@ -1,5 +1,5 @@
 import React from 'react';
-import ExperienceCard from './ExperienceCard';
+import ExperienceCard from '../molecules/ExperienceCard';
 
 const experiences = [
   {

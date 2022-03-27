@@ -1,9 +1,9 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import Options from '../../components/Options';
-import ExperienceCards from '../../components/ExperienceCards';
-import ProjectCards from '../../components/ProjectCards';
-import SkillCards from '../../components/SkillCards';
-import BlogCards from '../../components/BlogCards';
+import Options from '../../components/molecules/Options';
+import ExperienceCards from '../../components/organisms/ExperienceCards';
+import ProjectCards from '../../components/organisms/ProjectCards';
+import SkillCards from '../../components/molecules/SkillCards';
+import BlogCards from '../../components/organisms/BlogCards';
 
 const getMoodOptions = (actionProvider) => {
   return [
