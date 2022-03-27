@@ -20,12 +20,8 @@ a {
   width: 65% !important;
 }
   
-@media (max-width: 1200px) {
+@media (max-width: 640px) {
   .MuiDrawer-paper {
-    width: 100% !important;
+    width: 100%;
   }
-}
-
-.ui-overlay-shadow {
-  box-shadow: none;
 }
