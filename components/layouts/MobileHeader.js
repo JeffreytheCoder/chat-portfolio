@@ -1,8 +1,9 @@
-import { Box } from '@mui/system';
 import React, { useState } from 'react';
+import { Box } from '@mui/system';
 import StyledBadge from '../atoms/StyledBadge';
-import { Avatar, ButtonBase, Drawer, Typography } from '@mui/material';
+import { Avatar, ButtonBase, Drawer, IconButton } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import MobileLinksBar from './MobileLinksBar';
 
 function MobileHeader() {
   const [linksBarOpen, setLinksBarOpen] = useState(false);
@@ -32,7 +33,7 @@ function MobileHeader() {
       </Box>
 
       <Box
-        component={ButtonBase}
+        component={IconButton}
         onClick={() => setSectionBarOpen(!sectionBarOpen)}
       >
         <MenuRoundedIcon />
@@ -42,8 +43,10 @@ function MobileHeader() {
         anchor="left"
         open={linksBarOpen}
         onClose={() => setLinksBarOpen(false)}
-        PaperProps={{ sx: { width: '40%' } }}
-      ></Drawer>
+        PaperProps={{ sx: { padding: '20px', width: 'fit-content' } }}
+      >
+        <MobileLinksBar />
+      </Drawer>
     </Box>
   );
 }
