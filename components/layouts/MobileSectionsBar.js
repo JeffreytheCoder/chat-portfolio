@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Typography,
   List,
@@ -7,6 +7,7 @@ import {
   ListItemIcon,
   ListItemText,
   IconButton,
+  Drawer,
 } from '@mui/material';
 import { Box } from '@mui/system';
 
@@ -22,6 +23,14 @@ import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 
 function MobileSectionsBar() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [section, setSection] = useState('');
+
+  const toggleDrawer = (isOpen, section) => {
+    setSection(section);
+    setDrawerOpen(isOpen);
+  };
+
   const DrawerLayout = () => {
     return (
       <div sx={{ padding: 20 }}>
@@ -62,7 +71,10 @@ function MobileSectionsBar() {
     <Box flex flexDirection="column">
       <List>
         <ListItem disablePadding>
-          <ListItemButton>
+          <ListItemButton
+            aria-label="experience"
+            onClick={() => toggleDrawer(true, 'Experience')}
+          >
             <ListItemIcon>
               <WorkOutlineIcon />
             </ListItemIcon>
@@ -70,7 +82,10 @@ function MobileSectionsBar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
+          <ListItemButton
+            aria-label="projects"
+            onClick={() => toggleDrawer(true, 'Projects')}
+          >
             <ListItemIcon>
               <ArchitectureRoundedIcon />
             </ListItemIcon>
@@ -78,7 +93,10 @@ function MobileSectionsBar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
+          <ListItemButton
+            aria-label="skills"
+            onClick={() => toggleDrawer(true, 'Skills')}
+          >
             <ListItemIcon>
               <CodeOutlinedIcon />
             </ListItemIcon>
@@ -86,7 +104,10 @@ function MobileSectionsBar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
+          <ListItemButton
+            aria-label="blogs"
+            onClick={() => toggleDrawer(true, 'Blogs')}
+          >
             <ListItemIcon>
               <BookOutlinedIcon />
             </ListItemIcon>
@@ -94,6 +115,14 @@ function MobileSectionsBar() {
           </ListItemButton>
         </ListItem>
       </List>
+
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => toggleDrawer(false, '')}
+      >
+        <DrawerLayout />
+      </Drawer>
     </Box>
   );
 }
