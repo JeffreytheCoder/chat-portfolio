@@ -18,10 +18,14 @@ a {
 
 .MuiDrawer-paper {
   width: 65% !important;
-  }
+}
   
-  @media (max-width: 1200px) {
-      .MuiDrawer-paper {
-   width: 100% !important;
-   }
+@media (max-width: 1200px) {
+  .MuiDrawer-paper {
+    width: 100% !important;
   }
+}
+
+.ui-overlay-shadow {
+  box-shadow: none;
+}
