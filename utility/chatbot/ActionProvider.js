@@ -1,7 +1,7 @@
 // import { getProgrammingJoke } from 'random-joke-getter';
 
 const intro =
-  "I'm a Computer Science student at UCLA. I'm an aspiring software engineer, focused on fullstack web/app development. What do you want to know about me?";
+  "I'm a Computer Science student at UCLA. I'm a software engineer focused on fullstack development. What do you want to know about me?";
 const experience =
   "I have worked as Software Engineer intern in Done. and TechFin.AI. I'm going to be a SWE intern at Paramount this summer.";
 const projects =

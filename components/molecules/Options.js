@@ -1,6 +1,6 @@
+import { Chip } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Options.module.css';
-// import { Button } from '@mui/material';
 
 const Options = ({ getOptions, actionProvider }) => {
   const [options, setOptions] = useState([]);
@@ -13,13 +13,17 @@ const Options = ({ getOptions, actionProvider }) => {
     <div className={styles.container}>
       {options.map((option) => {
         return (
-          <button
-            className={styles.button}
+          <Chip
             key={option.id}
             onClick={option.handler}
-          >
-            {option.text}
-          </button>
+            label={option.text}
+            sx={{
+              marginRight: '5px',
+              padding: '2px',
+              fontSize: '0.85rem',
+              marginBottom: '5px',
+            }}
+          />
         );
       })}
     </div>
