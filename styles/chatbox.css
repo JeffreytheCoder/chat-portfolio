@@ -191,12 +191,12 @@
 }
 
 .react-chatbot-kit-chat-message-container {
-  padding: 0 17.5px 10px 17.5px;
+  padding: 0 17.5px 30px 17.5px;
   /* overflow-y: scroll; */
   overflow-x: hidden;
   height: auto;
   min-height: 100%;
-  margin-bottom: 5vh;
+  /* margin-bottom: 8vh; */
 }
 
 .react-chatbot-kit-chat-input {
