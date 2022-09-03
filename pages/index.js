@@ -54,7 +54,6 @@ const MobileHome = () => {
 
 export default function Home() {
   const { width } = useWindowSize();
-  console.log(width);
 
   return (
     <div className={styles.app}>
@@ -67,7 +66,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {width > 640 ? <WebHome /> : <MobileHome />}
+      {width > 740 ? <WebHome /> : <MobileHome />}
     </div>
   );
 }
