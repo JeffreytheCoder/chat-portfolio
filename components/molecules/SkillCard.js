@@ -37,11 +37,11 @@ function SkillCard({ name, skills, isDetailed }) {
             alignItems="center"
             sx={{ paddingTop: '3px' }}
           >
-            <Grid item xs={3} md={1}>
+            <Grid item xs={4} md={1}>
               <Typography>{name}</Typography>
             </Grid>
             <Grid item xs={8}>
-              <Box width="50%" marginLeft={2}>
+              <Box width="80%">
                 <LinearProgress
                   variant="determinate"
                   value={val}

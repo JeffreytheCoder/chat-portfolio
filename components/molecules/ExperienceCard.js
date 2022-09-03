@@ -1,10 +1,26 @@
-import { Box, Button, ButtonBase, Card, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  ButtonBase,
+  Card,
+  IconButton,
+  Typography,
+} from '@mui/material';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
 import { grey } from '@mui/material/colors';
+import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 
-function ExperienceCard({ name, position, date, imgSrc, works, isDetailed }) {
+function ExperienceCard({
+  name,
+  position,
+  date,
+  imgSrc,
+  works,
+  link,
+  isDetailed,
+}) {
   const [readMore, setReadMore] = useState(false);
 
   return (
@@ -27,7 +43,23 @@ function ExperienceCard({ name, position, date, imgSrc, works, isDetailed }) {
         width="100%"
         justifyContent="flex-start"
       >
-        <Typography variant="h6">{position}</Typography>
+        <Box
+          display="flex"
+          flexDirection="row"
+          width="100%"
+          alignItems="center"
+        >
+          <Typography variant="h6">{position}</Typography>
+          {link && (
+            <Box ml={0.2}>
+              <a href={link} target="blank">
+                <IconButton>
+                  <LaunchRoundedIcon fontSize="small" />
+                </IconButton>
+              </a>
+            </Box>
+          )}
+        </Box>
         <Box
           display="flex"
           flexDirection="row"
@@ -42,18 +74,12 @@ function ExperienceCard({ name, position, date, imgSrc, works, isDetailed }) {
         </Box>
         {readMore || isDetailed ? (
           <>
-            {/* <ButtonBase
-              sx={{
-                width: 'fit-content',
-                textTransform: 'none',
-                cursor: 'pointer',
-              }}
-              onClick={() => setReadMore(!readMore)}
-            >
-              <Typography color={grey[600]}>Hide</Typography>
-            </ButtonBase> */}
             {works.map((work, idx) => {
-              return <Typography key={idx}>• {work}</Typography>;
+              return (
+                <Box key={idx} mb={0.5}>
+                  <Typography width="95%">• {work}</Typography>
+                </Box>
+              );
             })}
           </>
         ) : (

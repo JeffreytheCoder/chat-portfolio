@@ -1,13 +1,13 @@
 // import { getProgrammingJoke } from 'random-joke-getter';
 
 const intro =
-  "I'm a Computer Science student at UCLA. I'm a software engineer focused on fullstack development. What do you want to know about me?";
+  "I'm a Computer Science student at UCLA and an aspiring software engineer. What do you want to know about me?";
 const experience =
-  "I have worked as Software Engineer intern in Done. and TechFin.AI. I'm going to be a SWE intern at Paramount this summer.";
+  'I worked as Software Engineer intern at Paramount, Done. and TechFin.AI.';
 const projects =
-  "I'm love spotting problems from people around me and building solutions that make their lives easier. My recent projects are BruinEats, OnCampus, and VMAWalk.";
+  "I'm love spotting problems from people around me and building solutions that make their lives easier.";
 const skills =
-  "I'm a MERN stack lover. I'm also skilled in Vue, Django, and Firebase. I'm learning about Typescript, GraphQL, and Gatsby.";
+  "I have three years of experience in fullstack development. I'm a MERN stack lover (MongoDB, Express, React, Node.js).";
 const blogs = 'Check out my blogs on Dev Community and Medium!';
 
 class ActionProvider {

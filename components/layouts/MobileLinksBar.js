@@ -48,7 +48,7 @@ function MobileLinksBar() {
       <List>
         <ListItem disablePadding>
           <a
-            href="https://drive.google.com/file/d/1WHlytWajUt7juF6nKY5KhfabCXS_Fr1z/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JOKZr9RP_HejWvgiomMuYk93MjKIgaqk/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
