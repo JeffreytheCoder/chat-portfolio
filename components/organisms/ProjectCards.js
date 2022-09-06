@@ -3,6 +3,18 @@ import ExperienceCard from '../molecules/ExperienceCard';
 
 const experiences = [
   {
+    name: 'Medical records Decentralized App',
+    position: 'MedChain',
+    date: 'Feb 2022 - Apr 2022',
+    imgSrc: 'medchain.jpg',
+    link: 'https://devpost.com/software/medchain-k4wzry',
+    works: [
+      'Implemented Solitidy smart contracts to store medical records on Interplanetary File System and link to a user block on Ethureum blockchain, allowing patients to own their medical records independent from hospitals',
+      'Built React website to connect with MetaMask for authentication and search on-chain records using Web3.js',
+      'Won 3rd place of NextStep hackathon, sponsored by Ethereum',
+    ],
+  },
+  {
     name: 'Survey auto-filling tool',
     position: 'UCLA CAT',
     date: 'May 2022 - Jul 2022',
@@ -11,6 +23,19 @@ const experiences = [
     works: [
       'Implemented manipulation of website actions using Python Selenium & ChromeDriver with conditional branching',
       'Automated Mac & Win distributions using Github Action and deployed CronJob on user’s OS to schedule runs',
+    ],
+  },
+  {
+    name: 'Health emergency alert for seniors',
+    position: 'Cura',
+    date: 'Apr 2022 - Apr 2022',
+    imgSrc: 'cura.jpg',
+    link: 'https://www.hackster.io/jeffreythecoder/cura-a-health-emergency-alert-for-seniors-we-care-ee08d1',
+    works: [
+      "Design and built a smart wrist band that detects the wearer's health emergency and sends SMS alert to emergency contacts",
+      "Incorporated Twilio API into WiFi module to send SMS with wearer's location triangulated by WiFi positioning system",
+      'Assured accurate fall detection by implementing three-stage change in gravitational acceleration from research results',
+      'Winning project of World Wide Health track and Best Online Demo in LA Hacks 2022',
     ],
   },
   {
@@ -23,17 +48,6 @@ const experiences = [
       'Managed 5-dev team, designed database schema, APIs & App structure, and led weekly sprints & code reviews',
       'Implemented web crawer using Puppeteer.js to fetch daily menu and scheduled runs using MongoDB Triggers',
       'Applied self-made MERN stack boilerplate and unifies code format using Prettier, reducing development frictions',
-    ],
-  },
-  {
-    name: 'Duo MFA passcode chrome extension',
-    position: 'EasyDuo',
-    date: 'Feb 2021 - Apr 2021',
-    imgSrc: 'easyduo.png',
-    link: 'https://chrome.google.com/webstore/detail/easy-duo-authentication/gminifhfphcinahingelhehkfagoghjk',
-    works: [
-      "Jailbroke Duo's Multi-factor Authentication by reverse engineering passcodes generation using HOTP algorithm",
-      'Built a Chorme extension to compute and allow copying new passcodes, saving 80% of login time for 1k+ users',
     ],
   },
   {
